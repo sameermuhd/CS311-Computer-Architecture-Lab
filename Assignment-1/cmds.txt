@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java -jar emulator.jar prime.asm 0 0
