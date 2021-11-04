@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ant
+ant make-jar
+java -Xmx1g -jar jars/assembler.jar prime.asm prime.out
+xxd -b -c 4 prime.out
+echo "prime"
+java -Xmx1g -jar jars/assembler.jar palindrome.asm palindrome.out
+xxd -b -c 4 palindrome.out
+echo "palindrome"
+java -Xmx1g -jar jars/assembler.jar fibonacci.asm fibonacci.out
+xxd -b -c 4 fibonacci.out
+echo "fibonacci"
+java -Xmx1g -jar jars/assembler.jar even-odd.asm even-odd.out
+xxd -b -c 4 even-odd.out
+echo "even-odd"
+java -Xmx1g -jar jars/assembler.jar descending.asm descending.out
+xxd -b -c 4 descending.out
+echo "descending"
