@@ -1,0 +1,9 @@
+#!bin/bash/
+
+ant
+ant make-jar
+java -jar jars/simulator.jar src/configuration/config.xml stats_fib.txt fibonacci.out
+java -jar jars/simulator.jar src/configuration/config.xml stats_prime.txt prime.out
+java -jar jars/simulator.jar src/configuration/config.xml stats_even_odd.txt evenorodd.out
+java -jar jars/simulator.jar src/configuration/config.xml stats_descending.txt descending.out
+java -jar jars/simulator.jar src/configuration/config.xml stats_palindrome.txt palindrome.out
